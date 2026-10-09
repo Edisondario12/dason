@@ -1,0 +1,192 @@
+/* Colores compartidos por la pantalla de inicio de sesión. */
+:root {
+    --primary-color: #1e3a8a;
+    --primary-light: #2563eb;
+    --bg: #f1f5fb;
+    --surface: #ffffff;
+    --text: #0f172a;
+    --text-muted: #526176;
+    --border: #cbd5e1;
+    --focus-ring: #bfdbfe;
+}
+
+/* El tamaño de los elementos incluye sus bordes y espacios interiores. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.5;
+    color: var(--text);
+    background: radial-gradient(ellipse at top left, #dbeafe, transparent 60%), var(--bg);
+}
+
+/* Tarjeta principal del formulario. */
+.login-card {
+    width: 100%;
+    max-width: 460px;
+    padding: 40px;
+    background: var(--surface);
+    border: 1px solid #e2e8f0;
+    border-top: 5px solid var(--primary-color);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgb(30 58 138 / 10%);
+}
+
+.login-header {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.login-header h1 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    font-size: 30px;
+    line-height: 1.2;
+    letter-spacing: -0.6px;
+}
+
+.login-header p {
+    color: var(--text-muted);
+    font-size: 15px;
+}
+
+/* Etiquetas y campos de entrada. */
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: #f8fafc;
+    color: var(--text);
+    font: inherit;
+    font-size: 16px;
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+.form-control::placeholder {
+    color: #64748b;
+    opacity: 1;
+}
+
+.form-control:focus {
+    outline: 2px solid var(--primary-light);
+    outline-offset: 1px;
+    border-color: var(--primary-light);
+    background: var(--surface);
+    box-shadow: 0 0 0 4px var(--focus-ring);
+}
+
+.form-actions {
+    margin-bottom: 24px;
+}
+
+.remember-me {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 32px;
+    color: var(--text-muted);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.remember-me input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-color);
+}
+
+/* Botón y enlace de registro. */
+.btn-submit {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 9px;
+    background: var(--primary-color);
+    color: white;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+    background: var(--primary-light);
+}
+
+.btn-submit:focus-visible,
+a:focus-visible,
+.remember-me input:focus-visible {
+    outline: 3px solid var(--primary-light);
+    outline-offset: 4px;
+}
+
+.login-footer {
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.login-footer a {
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-underline-offset: 3px;
+}
+
+.login-footer a:hover {
+    color: var(--primary-light);
+}
+
+/* Menos espacio interior en pantallas pequeñas. */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 30px 22px;
+    }
+
+    .login-header h1 {
+        font-size: 27px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
+
+/* Aviso del acceso de demostración. */
+.demo-notice {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Presupuestos | DASON</title>
+        <link rel="stylesheet" href="../Css/panel.css" />
+    </head>
+    <body>
+        <a class="skip" href="#contenido">Saltar al contenido</a>
+        <!-- Barra lateral: marca y navegación entre secciones. -->
+        <aside class="sidebar">
+            <a class="brand" href="panel.html">
+                DASON
+                <span>Finanzas personales</span>
+            </a>
+            <nav aria-label="Navegación principal">
+                <a href="panel.html">Inicio</a>
+                <a href="cuentas.html">Mis cuentas</a>
+                <a href="movimientos.html">Movimientos</a>
+                <a href="categorias.html">Categorías</a>
+                <a href="presupuestos.html" aria-current="page">Presupuestos</a>
+                <a href="perfil.html">Mi perfil</a>
+            </nav>
+            <a class="exit" href="../index.html">Volver al inicio de sesión ↗</a>
+        </aside>
+        <!-- Contenido principal de esta página. -->
+        <main id="contenido">
+            <!-- Encabezado y estado de la demostración. -->
+            <header>
+                <div>
+                    <span class="eyebrow">TU ESPACIO FINANCIERO</span>
+                    <h1>Presupuestos</h1>
+                    <p>Planifica tus gastos</p>
+                </div>
+                <span class="badge">Vista de demostración</span>
+            </header>
+            <p class="notice">
+                Datos de ejemplo · Esta interfaz permite explorar las secciones; aún no guarda datos
+                ni autentica usuarios.
+            </p>
+            <section class="sheet">
+                <h2>Plan de octubre de 2026</h2>
+                <p>Vigencia: 1 al 31 de octubre · COP</p>
+                <div class="budget">
+                    <div>
+                        <h3>Alimentación</h3>
+                        <span>$ 450.000 de $ 600.000</span>
+                    </div>
+                    <progress
+                        value="75"
+                        max="100"
+                        aria-label="Presupuesto de Alimentación: 75% utilizado"
+                    >
+                        75%
+                    </progress>
+                    <p>75% utilizado</p>
+                </div>
+                <div class="budget">
+                    <div>
+                        <h3>Servicios</h3>
+                        <span>$ 200.000 de $ 250.000</span>
+                    </div>
+                    <progress
+                        value="80"
+                        max="100"
+                        aria-label="Presupuesto de Servicios: 80% utilizado"
+                    >
+                        80%
+                    </progress>
+                    <p>80% utilizado</p>
+                </div>
+                <div class="budget">
+                    <div>
+                        <h3>Transporte</h3>
+                        <span>$ 100.000 de $ 200.000</span>
+                    </div>
+                    <progress
+                        value="50"
+                        max="100"
+                        aria-label="Presupuesto de Transporte: 50% utilizado"
+                    >
+                        50%
+                    </progress>
+                    <p>50% utilizado</p>
+                </div>
+            </section>
+            <!-- Pie de página compartido. -->
+            <footer>DASON · Organiza tu dinero, paso a paso.</footer>
+        </main>
+    </body>
+</html>
